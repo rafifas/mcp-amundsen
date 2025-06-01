@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "Amundsen-Docker": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--network",
+        "host",
+        "-e",
+        "AMUNDSEN_API_URL",
+        "mcp-amundsen"
+      ],
+      "env": {
+        "AMUNDSEN_API_URL": "http://localhost:5000"
+      },
+      "transportType": "stdio"
+    }
+  }
+}
